@@ -2,7 +2,7 @@
 
 Started learning MLOps and Upskilling myself
 
-Day 1: Environment Configuration
+##Day 1: Environment Configuration
 
 a. Learned Configuring Environment with GitHub Codespaces (VS Code)
 
@@ -10,7 +10,7 @@ b. Add, commit and push our updated work to git repository (use of git status an
 
 c. Created homework 1 jupyter notebook - Loaded the taxi data, imported sklearn and pandas library
 
-Day 2: Environment Preparation
+##Day 2: Environment Preparation
 
 a. Created an EC2 Instance: 
 Launches a virtual machine in AWS with your chosen OS (Ubuntu, etc.). Acts as your remote server—the place where your model will eventually run in production. You control the hardware (CPU/GPU), OS, storage, and networking. This server can host your ML model as a REST API or batch inference pipeline. You can deploy using Docker, serve with FastAPI, and manage traffic with a load balancer.
