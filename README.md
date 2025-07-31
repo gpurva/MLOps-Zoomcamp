@@ -30,42 +30,37 @@ e. Created a Jupyter Notebook in EC2 & Port Forwarded to Local Machine using VS:
 
 **Day 3: MLOps Maturity Levels**
 
-_Level 0: Manual ML Process_
-Use case: Prototyping, research, small projects.
-Characteristics:No automation; everything is done manually (data collection, training, deployment). Jupyter notebooks or scripts used for experimentation. No version control for data or models. Manual model handoff to engineering.
-Tools: Jupyter, pandas, scikit-learn, basic Git.
+_Level 0: Manual ML Process_<br>
+Use case: Prototyping, research, small projects.<br>
+Characteristics:No automation; everything is done manually (data collection, training, deployment). Jupyter notebooks or scripts used for experimentation. No version control for data or models. Manual model handoff to engineering.<br>
+Tools: Jupyter, pandas, scikit-learn, basic Git.<br>
 Problems: Poor reproducibility. Hard to scale. No monitoring or retraining pipeline.
 
-_Level 1: ML Pipeline Automation (MVP-level)_
-Use case: Small teams deploying models into production.
-Characteristics:Automated data preprocessing and model training. Basic CI/CD for ML (e.g., model training triggered by code push). Model versioning begins (e.g., via MLflow, DVC). Models deployed via APIs (e.g., Flask, FastAPI).
-Tools: MLflow, DVC, Airflow, Jenkins, Docker, GitHub Actions.
-Benefits: More reproducible and scalable than Level 0. Easier experimentation and collaboration.
-Challenges: Retraining might still be manual. Monitoring and data drift detection are limited. 
+_Level 1: ML Pipeline Automation (MVP-level)_<br>
+Use case: Small teams deploying models into production.<br>
+Characteristics:Automated data preprocessing and model training. Basic CI/CD for ML (e.g., model training triggered by code push). Model versioning begins (e.g., via MLflow, DVC). Models deployed via APIs (e.g., Flask, FastAPI).<br>
+Tools: MLflow, DVC, Airflow, Jenkins, Docker, GitHub Actions.<br>
+Benefits: More reproducible and scalable than Level 0. Easier experimentation and collaboration.<br>
+Challenges: Retraining might still be manual. Monitoring and data drift detection are limited.<br> 
 
-_Level 2: Continuous Training and Deployment_
-Use case: Organizations with multiple models in production.
-Characteristics: Continuous integration and continuous delivery (CI/CD) extended to ML (CT/CI/CD). Automated retraining triggered by data changes or model drift. Feature and model versioning. Model registry and approval workflows.Unit, integration, and data validation tests included.
-Tools: Kubeflow, TFX, Metaflow, SageMaker Pipelines, MLflow, Feast (feature store).
-Benefits: Quicker iterations. Reproducible, automated, and scalable. Better governance and compliance.
-Challenges: Requires more infrastructure and orchestration expertise. Cost and complexity grow.
+_Level 2: Continuous Training and Deployment_<br>
+Use case: Organizations with multiple models in production.<br>
+Characteristics: Continuous integration and continuous delivery (CI/CD) extended to ML (CT/CI/CD). Automated retraining triggered by data changes or model drift. Feature and model versioning. Model registry and approval workflows.Unit, integration, and data validation tests included.<br>
+Tools: Kubeflow, TFX, Metaflow, SageMaker Pipelines, MLflow, Feast (feature store).<br>
+Benefits: Quicker iterations. Reproducible, automated, and scalable. Better governance and compliance.<br>
+Challenges: Requires more infrastructure and orchestration expertise. Cost and complexity grow.<br>
 
 _Level 3: Full MLOps with Governance and Monitoring_
-Use case: Mature ML-driven enterprises.
-Characteristics: End-to-end pipelines: data ingestion → model training → deployment → monitoring → retraining. Real-time monitoring for model performance, drift, bias, and data quality. Role-based access control (RBAC), audit trails, governance. Canary deployments, A/B testing, shadow mode deployments. Integrated with business KPIs and observability stacks.
-Tools: Seldon, Argo, Prometheus + Grafana, Evidently, Great Expectations, WhyLabs.
-Benefits: Maximum automation and business alignment. Scalable across teams and use cases. Regulatory and security compliance possible.
-Challenges: High cost and resource-intensive. Needs DevOps + ML engineering maturity.
+Use case: Mature ML-driven enterprises.<br>
+Characteristics: End-to-end pipelines: data ingestion → model training → deployment → monitoring → retraining. Real-time monitoring for model performance, drift, bias, and data quality. Role-based access control (RBAC), audit trails, governance. Canary deployments, A/B testing, shadow mode deployments. Integrated with business KPIs and observability stacks.<br>
+Tools: Seldon, Argo, Prometheus + Grafana, Evidently, Great Expectations, WhyLabs.<br>
+Benefits: Maximum automation and business alignment. Scalable across teams and use cases. Regulatory and security compliance possible.<br>
+Challenges: High cost and resource-intensive. Needs DevOps + ML engineering maturity.<br>
 
-_Summarization of MLOps Maturity Levels_
-
-Level	Automation	Reproducibility	CI/CD	Monitoring	Use Case
-
-0	❌ Manual	❌ Poor	❌ None	❌ None	Prototyping, research
-
-1	⚠️ Partial	✅ Basic	✅ Basic	❌ None	MVPs, single model
-
-2	✅ Full	✅ Strong	✅ Full	⚠️ Partial	Production models
-
-3	✅ End-to-End	✅ Strong	✅ Advanced	✅ Full	Enterprise-scale ML
+_Summarization of MLOps Maturity Levels_<br>
+Level	Automation	Reproducibility	CI/CD	Monitoring	Use Case <br>
+0	❌ Manual	❌ Poor	❌ None	❌ None	Prototyping, research <br>
+1	⚠️ Partial	✅ Basic	✅ Basic	❌ None	MVPs, single model <br>
+2	✅ Full	✅ Strong	✅ Full	⚠️ Partial	Production models <br>
+3	✅ End-to-End	✅ Strong	✅ Advanced	✅ Full	Enterprise-scale ML <br>
 
