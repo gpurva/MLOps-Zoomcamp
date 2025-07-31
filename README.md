@@ -58,9 +58,9 @@ Benefits: Maximum automation and business alignment. Scalable across teams and u
 Challenges: High cost and resource-intensive. Needs DevOps + ML engineering maturity.<br>
 
 _Summarization of MLOps Maturity Levels_<br>
-Level	Automation	Reproducibility	CI/CD	Monitoring	Use Case <br>
-0	❌ Manual	❌ Poor	❌ None	❌ None	Prototyping, research <br>
-1	⚠️ Partial	✅ Basic	✅ Basic	❌ None	MVPs, single model <br>
-2	✅ Full	✅ Strong	✅ Full	⚠️ Partial	Production models <br>
-3	✅ End-to-End	✅ Strong	✅ Advanced	✅ Full	Enterprise-scale ML <br>
+Level	Automation	Reproducibility	CI/CD	      Monitoring	       Use Case <br>
+0	    ❌ Manual	  ❌ Poor	 ❌ None	      ❌ None	       Prototyping, research <br>
+1	    ⚠️ Partial	   ✅ Basic	  ✅ Basic      ❌ None	        MVPs, single model <br>
+2	    ✅ Full	      ✅ Strong	 ✅ Full	      ⚠️ Partial	    Production models <br>
+3	    ✅ End-to-End  ✅ Strong	 ✅ Advanced	  ✅ Full	       Enterprise-scale ML <br>
 
