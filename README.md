@@ -2,6 +2,8 @@
 
 Started learning MLOps and Upskilling myself
 
+**Module 1: Infrastructure and Prerequisites**
+
 **Day 1: Environment Configuration**
 
 a. Learned Configuring Environment with GitHub Codespaces (VS Code)
@@ -26,4 +28,40 @@ Lets you open and edit files on the EC2 server directly in your local VS Code ed
 
 e. Created a Jupyter Notebook in EC2 & Port Forwarded to Local Machine using VS: Runs a Jupyter Notebook server inside the EC2. Port forwarding via VS Code tunnels EC2’s port (e.g., 8888) to your local browser so you can access the notebook like it’s running locally. Jupyter notebooks are great for interactive model development and experimentation. Running them in EC2 gives you access to server-level compute (e.g., GPU instances) while developing in a familiar UI. Notebooks are used to: Test code before converting it into production pipelines, Visualize model outputs and performance, Prepare training data and validate preprocessing. You don't use notebooks in production directly, but they’re crucial for R&D and reproducibility.
 
+**Day 3: MLOps Maturity Levels**
+
+_Level 0: Manual ML Process_
+Use case: Prototyping, research, small projects.
+Characteristics:No automation; everything is done manually (data collection, training, deployment). Jupyter notebooks or scripts used for experimentation. No version control for data or models. Manual model handoff to engineering.
+Tools: Jupyter, pandas, scikit-learn, basic Git.
+Problems: Poor reproducibility. Hard to scale. No monitoring or retraining pipeline.
+
+_Level 1: ML Pipeline Automation (MVP-level)_
+Use case: Small teams deploying models into production.
+Characteristics:Automated data preprocessing and model training. Basic CI/CD for ML (e.g., model training triggered by code push). Model versioning begins (e.g., via MLflow, DVC). Models deployed via APIs (e.g., Flask, FastAPI).
+Tools: MLflow, DVC, Airflow, Jenkins, Docker, GitHub Actions.
+Benefits: More reproducible and scalable than Level 0. Easier experimentation and collaboration.
+Challenges: Retraining might still be manual. Monitoring and data drift detection are limited. 
+
+_Level 2: Continuous Training and Deployment_
+Use case: Organizations with multiple models in production.
+Characteristics: Continuous integration and continuous delivery (CI/CD) extended to ML (CT/CI/CD). Automated retraining triggered by data changes or model drift. Feature and model versioning. Model registry and approval workflows.Unit, integration, and data validation tests included.
+Tools: Kubeflow, TFX, Metaflow, SageMaker Pipelines, MLflow, Feast (feature store).
+Benefits: Quicker iterations. Reproducible, automated, and scalable. Better governance and compliance.
+Challenges: Requires more infrastructure and orchestration expertise. Cost and complexity grow.
+
+_Level 3: Full MLOps with Governance and Monitoring_
+Use case: Mature ML-driven enterprises.
+Characteristics: End-to-end pipelines: data ingestion → model training → deployment → monitoring → retraining. Real-time monitoring for model performance, drift, bias, and data quality. Role-based access control (RBAC), audit trails, governance. Canary deployments, A/B testing, shadow mode deployments. Integrated with business KPIs and observability stacks.
+Tools: Seldon, Argo, Prometheus + Grafana, Evidently, Great Expectations, WhyLabs.
+Benefits: Maximum automation and business alignment. Scalable across teams and use cases. Regulatory and security compliance possible.
+Challenges: High cost and resource-intensive. Needs DevOps + ML engineering maturity.
+
+_Summarization of MLOps Maturity Levels_
+
+Level	Automation	Reproducibility	CI/CD	Monitoring	Use Case
+0	❌ Manual	❌ Poor	❌ None	❌ None	Prototyping, research
+1	⚠️ Partial	✅ Basic	✅ Basic	❌ None	MVPs, single model
+2	✅ Full	✅ Strong	✅ Full	⚠️ Partial	Production models
+3	✅ End-to-End	✅ Strong	✅ Advanced	✅ Full	Enterprise-scale ML
 
